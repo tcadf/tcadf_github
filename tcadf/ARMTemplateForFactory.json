@@ -85,6 +85,9 @@
 					"elapsedTimeMetric": {},
 					"cancelAfter": {}
 				},
+				"folder": {
+					"name": "pl_git_thienphantcdata"
+				},
 				"annotations": []
 			},
 			"dependsOn": [
@@ -100,6 +103,9 @@
 				"linkedServiceName": {
 					"referenceName": "Link_Emp_Blob_Txt",
 					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "ds_git_thienphantcdata"
 				},
 				"annotations": [],
 				"type": "DelimitedText",
@@ -128,6 +134,9 @@
 				"linkedServiceName": {
 					"referenceName": "Link_tcwebappdb_azuresql",
 					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "ds_git_thienphantcdata"
 				},
 				"annotations": [],
 				"type": "AzureSqlTable",
