@@ -5,6 +5,9 @@
 			"referenceName": "Link_Emp_Blob_Txt",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "ds_git_thienphantcdata"
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
