@@ -15,6 +15,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'Link_tcwebappdb_azuresql'"
 		},
+		"Link_unibenpocdb_azuresql_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'Link_unibenpocdb_azuresql'"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -47,6 +51,9 @@
 					},
 					"Link_tcwebappdb_azuresql_connectionString": {
 						"value": "[parameters('Link_tcwebappdb_azuresql_connectionString')]"
+					},
+					"Link_unibenpocdb_azuresql_connectionString": {
+						"value": "[parameters('Link_unibenpocdb_azuresql_connectionString')]"
 					}
 				}
 			},

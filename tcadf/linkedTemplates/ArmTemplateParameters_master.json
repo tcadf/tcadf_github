@@ -11,6 +11,9 @@
 		"Link_tcwebappdb_azuresql_connectionString": {
 			"value": ""
 		},
+		"Link_unibenpocdb_azuresql_connectionString": {
+			"value": ""
+		},
 		"containerUri": {
 			"value": ""
 		},
