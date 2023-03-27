@@ -1,0 +1,16 @@
+{
+	"name": "ds_emp_tcwebappdb_azuresql",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Link_tcwebappdb_azuresql",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "emp"
+		}
+	}
+}
