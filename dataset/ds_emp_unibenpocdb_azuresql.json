@@ -1,0 +1,16 @@
+{
+	"name": "ds_emp_unibenpocdb_azuresql",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Link_unibenpocdb_azuresql",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "emp"
+		}
+	}
+}
