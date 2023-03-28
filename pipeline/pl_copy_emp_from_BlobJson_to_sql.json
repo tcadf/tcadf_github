@@ -1,5 +1,5 @@
 {
-	"name": "CopyPipeline_hqn",
+	"name": "pl_copy_emp_from_BlobJson_to_sql",
 	"properties": {
 		"activities": [
 			{
@@ -78,6 +78,9 @@
 				]
 			}
 		],
+		"folder": {
+			"name": "pl_git_thienphantcdata"
+		},
 		"annotations": []
 	}
 }
