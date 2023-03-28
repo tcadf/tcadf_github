@@ -11,6 +11,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'Link_Emp_Blob_Txt'"
 		},
+		"Link_embedappstorage_Blob_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'Link_embedappstorage_Blob'"
+		},
 		"Link_tcwebappdb_azuresql_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'Link_tcwebappdb_azuresql'"
@@ -48,6 +52,9 @@
 					},
 					"Link_Emp_Blob_Txt_connectionString": {
 						"value": "[parameters('Link_Emp_Blob_Txt_connectionString')]"
+					},
+					"Link_embedappstorage_Blob_connectionString": {
+						"value": "[parameters('Link_embedappstorage_Blob_connectionString')]"
 					},
 					"Link_tcwebappdb_azuresql_connectionString": {
 						"value": "[parameters('Link_tcwebappdb_azuresql_connectionString')]"

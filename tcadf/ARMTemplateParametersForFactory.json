@@ -8,6 +8,9 @@
 		"Link_Emp_Blob_Txt_connectionString": {
 			"value": ""
 		},
+		"Link_embedappstorage_Blob_connectionString": {
+			"value": ""
+		},
 		"Link_tcwebappdb_azuresql_connectionString": {
 			"value": ""
 		},
