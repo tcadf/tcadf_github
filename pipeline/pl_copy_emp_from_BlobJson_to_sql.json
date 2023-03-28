@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "CopyFromBlobJsonToSql",
+				"name": "Copy_hqn",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -13,7 +13,16 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [],
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "emp//emp_json.json"
+					},
+					{
+						"name": "Destination",
+						"value": "dbo.emp"
+					}
+				],
 				"typeProperties": {
 					"source": {
 						"type": "JsonSource",
@@ -27,21 +36,43 @@
 						}
 					},
 					"sink": {
-						"type": "AzureSqlSink",
-						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": false
+						"type": "AzureSqlSink"
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"validateDataConsistency": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['FirstName']"
+								},
+								"sink": {
+									"name": "FirstName",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['LastName']"
+								},
+								"sink": {
+									"name": "LastName",
+									"type": "String"
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_emp_Json_Blob",
+						"referenceName": "SourceDataset_hqn",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_emp_tcwebappdb_azuresql",
+						"referenceName": "DestinationDataset_hqn",
 						"type": "DatasetReference"
 					}
 				]
