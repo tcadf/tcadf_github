@@ -5,6 +5,9 @@
 			"referenceName": "Link_unibenpocdb_azuresql",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "ds_git_thienphantcdata"
+		},
 		"annotations": [],
 		"type": "SqlServerTable",
 		"schema": [],
