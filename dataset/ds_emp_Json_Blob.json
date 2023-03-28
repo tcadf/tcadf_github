@@ -17,6 +17,16 @@
 				"container": "emp"
 			}
 		},
-		"schema": {}
+		"schema": {
+			"type": "object",
+			"properties": {
+				"FirstName": {
+					"type": "string"
+				},
+				"LastName": {
+					"type": "string"
+				}
+			}
+		}
 	}
 }

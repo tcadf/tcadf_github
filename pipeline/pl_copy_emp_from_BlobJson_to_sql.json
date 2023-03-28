@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy_hqn",
+				"name": "CopyFromBlobJsonToSql",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -66,13 +66,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDataset_hqn",
+						"referenceName": "ds_emp_Json_Blob",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DestinationDataset_hqn",
+						"referenceName": "ds_emp_tcwebappdb_azuresql",
 						"type": "DatasetReference"
 					}
 				]
