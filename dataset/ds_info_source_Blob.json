@@ -1,0 +1,25 @@
+{
+	"name": "ds_info_source_Blob",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Link_embedappstorage_Blob",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "ds_git_thienphantcdata"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "infosource"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
