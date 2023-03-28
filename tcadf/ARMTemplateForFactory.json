@@ -188,7 +188,16 @@
 							"secureOutput": false,
 							"secureInput": false
 						},
-						"userProperties": [],
+						"userProperties": [
+							{
+								"name": "Source",
+								"value": "emp//emp_json.json"
+							},
+							{
+								"name": "Destination",
+								"value": "dbo.emp"
+							}
+						],
 						"typeProperties": {
 							"source": {
 								"type": "JsonSource",
@@ -202,11 +211,33 @@
 								}
 							},
 							"sink": {
-								"type": "AzureSqlSink",
-								"writeBehavior": "insert",
-								"sqlWriterUseTableLock": false
+								"type": "AzureSqlSink"
 							},
-							"enableStaging": false
+							"enableStaging": false,
+							"validateDataConsistency": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"mappings": [
+									{
+										"source": {
+											"path": "$['FirstName']"
+										},
+										"sink": {
+											"name": "FirstName",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"path": "$['LastName']"
+										},
+										"sink": {
+											"name": "LastName",
+											"type": "String"
+										}
+									}
+								]
+							}
 						},
 						"inputs": [
 							{
@@ -463,7 +494,17 @@
 						"container": "emp"
 					}
 				},
-				"schema": {}
+				"schema": {
+					"type": "object",
+					"properties": {
+						"FirstName": {
+							"type": "string"
+						},
+						"LastName": {
+							"type": "string"
+						}
+					}
+				}
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/Link_Emp_Blob_Txt')]"
@@ -532,6 +573,9 @@
 				"linkedServiceName": {
 					"referenceName": "Link_unibenpocdb_azuresql",
 					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "ds_git_thienphantcdata"
 				},
 				"annotations": [],
 				"type": "SqlServerTable",
