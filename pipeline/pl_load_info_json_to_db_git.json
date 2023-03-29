@@ -1,9 +1,9 @@
 {
-	"name": "pl_copy_emp_from_unibenpocdb_to_sql",
+	"name": "pl_load_info_json_to_db_git",
 	"properties": {
 		"activities": [
 			{
-				"name": "CopyFromUnibenpocdbToSql",
+				"name": "Copy data1",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -16,44 +16,42 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "SqlServerSource",
-						"queryTimeout": "02:00:00",
-						"partitionOption": "None"
+						"type": "JsonSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "JsonReadSettings"
+						}
 					},
 					"sink": {
 						"type": "AzureSqlSink",
 						"writeBehavior": "insert",
 						"sqlWriterUseTableLock": false
 					},
-					"enableStaging": false,
-					"translator": {
-						"type": "TabularTranslator",
-						"typeConversion": true,
-						"typeConversionSettings": {
-							"allowDataTruncation": true,
-							"treatBooleanAsNumber": false
-						}
-					}
+					"enableStaging": false
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_emp_unibenpocdb_azuresql",
+						"referenceName": "ds_info_blob_json_git",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_emp_tcwebappdb_azuresql",
+						"referenceName": "ds_info_sql_git",
 						"type": "DatasetReference"
 					}
 				]
 			}
 		],
 		"folder": {
-			"name": "pl_git_thienphantcdata"
+			"name": "pl_git_PhanNhatThien"
 		},
 		"annotations": [],
-		"lastPublishTime": "2023-03-27T11:23:08Z"
+		"lastPublishTime": "2023-03-27T07:38:32Z"
 	},
 	"type": "Microsoft.DataFactory/factories/pipelines"
 }

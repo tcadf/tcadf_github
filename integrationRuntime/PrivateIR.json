@@ -1,0 +1,6 @@
+{
+	"name": "PrivateIR",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}

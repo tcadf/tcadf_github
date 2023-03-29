@@ -1,19 +1,19 @@
 {
-	"name": "ds_emp_tcwebappdb_azuresql",
+	"name": "ds_info_sql_unibenpocdb_git",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "Link_tcwebappdb_azuresql",
+			"referenceName": "info_sql_unibenpocdb_git",
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "ds_git_thienphantcdata"
+			"name": "ds_git_PhanNhatThien"
 		},
 		"annotations": [],
-		"type": "AzureSqlTable",
+		"type": "SqlServerTable",
 		"schema": [],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "emp"
+			"table": "info"
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"

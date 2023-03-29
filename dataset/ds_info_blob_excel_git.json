@@ -1,24 +1,23 @@
 {
-	"name": "ds_info_source_Blob",
+	"name": "ds_info_blob_excel_git",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "Link_embedappstorage_Blob",
+			"referenceName": "blobinfogit",
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "ds_git_thienphantcdata"
+			"name": "ds_git_PhanNhatThien"
 		},
 		"annotations": [],
-		"type": "DelimitedText",
+		"type": "Excel",
 		"typeProperties": {
+			"sheetName": "Sheet1",
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": "info_excel.xlsx",
 				"container": "infosource"
 			},
-			"columnDelimiter": ",",
-			"escapeChar": "\\",
-			"firstRowAsHeader": true,
-			"quoteChar": "\""
+			"firstRowAsHeader": true
 		},
 		"schema": []
 	},

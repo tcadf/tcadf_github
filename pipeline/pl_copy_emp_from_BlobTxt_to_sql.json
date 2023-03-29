@@ -58,6 +58,8 @@
 		"folder": {
 			"name": "pl_git_thienphantcdata"
 		},
-		"annotations": []
-	}
+		"annotations": [],
+		"lastPublishTime": "2023-03-27T09:31:22Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
 }

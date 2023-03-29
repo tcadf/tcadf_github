@@ -1,0 +1,9 @@
+{
+	"name": "tcadf",
+	"location": "southeastasia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "67d5e90e-c7a7-4436-bcfe-145ba732ccd6",
+		"tenantId": "7a7d3dcf-70fd-4ebb-a423-e776afbcd4b8"
+	}
+}

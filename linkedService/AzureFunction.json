@@ -1,0 +1,17 @@
+{
+	"name": "AzureFunction",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureFunction",
+		"typeProperties": {
+			"functionAppUrl": "https://tc-pbiembedfunction.azurewebsites.net",
+			"authentication": "Anonymous",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDAxMThFOTAwLTgwMEEtNDNERi1BM0JELTk5MEEzREVDMTc2Q19kZjYzNjQ0Ni00OTkyLTRhNDUtYjg1ZC0xNGZhODhlMDIwZTkiDQp9"
+		},
+		"connectVia": {
+			"referenceName": "AzureIRwithPrivate",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

@@ -1,19 +1,19 @@
 {
-	"name": "ds_emp_tcwebappdb_azuresql",
+	"name": "list_sql_info",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "Link_tcwebappdb_azuresql",
+			"referenceName": "infodb",
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "ds_git_thienphantcdata"
+			"name": "ds_adf"
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "emp"
+			"table": "Info"
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"

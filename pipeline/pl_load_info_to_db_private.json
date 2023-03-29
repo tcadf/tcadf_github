@@ -1,9 +1,9 @@
 {
-	"name": "pl_copy_emp_from_unibenpocdb_to_sql",
+	"name": "pl_load_info_to_db_private",
 	"properties": {
 		"activities": [
 			{
-				"name": "CopyFromUnibenpocdbToSql",
+				"name": "cp_info_to_db",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -16,9 +16,15 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "SqlServerSource",
-						"queryTimeout": "02:00:00",
-						"partitionOption": "None"
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
 					},
 					"sink": {
 						"type": "AzureSqlSink",
@@ -37,23 +43,23 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_emp_unibenpocdb_azuresql",
+						"referenceName": "list_info_private",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_emp_tcwebappdb_azuresql",
+						"referenceName": "list_sql_info",
 						"type": "DatasetReference"
 					}
 				]
 			}
 		],
 		"folder": {
-			"name": "pl_git_thienphantcdata"
+			"name": "pl_adf"
 		},
 		"annotations": [],
-		"lastPublishTime": "2023-03-27T11:23:08Z"
+		"lastPublishTime": "2023-03-27T07:38:32Z"
 	},
 	"type": "Microsoft.DataFactory/factories/pipelines"
 }

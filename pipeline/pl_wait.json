@@ -1,0 +1,22 @@
+{
+	"name": "pl_wait",
+	"properties": {
+		"activities": [
+			{
+				"name": "Wait1",
+				"type": "Wait",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 1
+				}
+			}
+		],
+		"folder": {
+			"name": "pl_git_PhanNhatThien"
+		},
+		"annotations": [],
+		"lastPublishTime": "2023-03-27T07:38:31Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

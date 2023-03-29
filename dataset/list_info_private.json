@@ -1,19 +1,20 @@
 {
-	"name": "ds_info_source_Blob",
+	"name": "list_info_private",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "Link_embedappstorage_Blob",
+			"referenceName": "blobprivate",
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "ds_git_thienphantcdata"
+			"name": "ds_adf"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"container": "infosource"
+				"fileName": "Info2.txt",
+				"container": "testing"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
