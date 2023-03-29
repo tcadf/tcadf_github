@@ -1,7 +1,0 @@
-{
-	"name": "AzureSqlDbtcwebappdb",
-	"properties": {
-		"privateLinkResourceId": "/subscriptions/4800c9c5-3413-438f-8082-71f6dba2cab9/resourceGroups/Training/providers/Microsoft.Sql/servers/unibenpoc",
-		"groupId": "sqlServer"
-	}
-}
