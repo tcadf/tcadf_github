@@ -1,0 +1,10 @@
+{
+	"name": "AzureDataLakeStorage335",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/4800c9c5-3413-438f-8082-71f6dba2cab9/resourceGroups/Training/providers/Microsoft.Storage/storageAccounts/storageprivateip",
+		"groupId": "dfs",
+		"fqdns": [
+			"storageprivateip.dfs.core.windows.net"
+		]
+	}
+}

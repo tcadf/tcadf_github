@@ -1,0 +1,28 @@
+{
+	"name": "ty",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "a",
+					"value": "test"
+				}
+			}
+		],
+		"variables": {
+			"a": {
+				"type": "String"
+			}
+		},
+		"folder": {
+			"name": "pl_adf"
+		},
+		"annotations": [],
+		"lastPublishTime": "2023-03-27T07:38:31Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

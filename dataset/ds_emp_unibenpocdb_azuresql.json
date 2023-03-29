@@ -1,0 +1,20 @@
+{
+	"name": "ds_emp_unibenpocdb_azuresql",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Link_unibenpocdb_azuresql",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "ds_git_thienphantcdata"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "emp"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

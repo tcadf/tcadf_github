@@ -1,0 +1,27 @@
+{
+	"name": "list_info_private",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "blobprivate",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "ds_adf"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Info2.txt",
+				"container": "testing"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

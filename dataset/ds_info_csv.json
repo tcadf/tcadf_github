@@ -1,0 +1,27 @@
+{
+	"name": "ds_info_csv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "blobinfo",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "ds_adf"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "info_csv.csv",
+				"container": "infosource"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

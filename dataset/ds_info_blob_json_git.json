@@ -1,0 +1,23 @@
+{
+	"name": "ds_info_blob_json_git",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "blobinfogit",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "ds_git_PhanNhatThien"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "info_json.json",
+				"container": "infosource"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

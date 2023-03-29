@@ -1,0 +1,27 @@
+{
+	"name": "ds_info_blob_csv_git",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "blobinfogit",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "ds_git_PhanNhatThien"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "info_csv.csv",
+				"container": "infosource"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
