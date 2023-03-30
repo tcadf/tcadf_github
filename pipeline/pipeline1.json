@@ -16,14 +16,14 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "JsonSource",
+						"type": "DelimitedTextSource",
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
 							"recursive": true,
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
-							"type": "JsonReadSettings"
+							"type": "DelimitedTextReadSettings"
 						}
 					},
 					"sink": {
@@ -31,11 +31,19 @@
 						"writeBehavior": "insert",
 						"sqlWriterUseTableLock": false
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_emp_Json_Blob",
+						"referenceName": "ds_info_blob_txt_git",
 						"type": "DatasetReference"
 					}
 				],
