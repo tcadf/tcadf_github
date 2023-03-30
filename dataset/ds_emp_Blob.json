@@ -5,6 +5,11 @@
 			"referenceName": "Link_embedappstorage_Blob",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"FileName": {
+				"type": "string"
+			}
+		},
 		"folder": {
 			"name": "ds_git_thienphantcdata"
 		},
