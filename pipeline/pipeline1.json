@@ -16,11 +16,14 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "ExcelSource",
+						"type": "DelimitedTextSource",
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
 							"recursive": true,
 							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
 						}
 					},
 					"sink": {
@@ -40,7 +43,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_info_excel",
+						"referenceName": "ds_info_blob_txt_git",
 						"type": "DatasetReference"
 					}
 				],
