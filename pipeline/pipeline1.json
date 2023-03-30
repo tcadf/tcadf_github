@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "Copy data2",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -43,7 +43,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_info_blob_txt_git",
+						"referenceName": "list_info",
 						"type": "DatasetReference"
 					}
 				],
