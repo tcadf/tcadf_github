@@ -7,6 +7,18 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "tcadf"
 		},
+		"AzureDataLakeStorage1_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
+		},
+		"AzureFunction_functionKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'functionKey' of 'AzureFunction'"
+		},
+		"Link_Emp_Blob_Private_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'Link_Emp_Blob_Private'"
+		},
 		"Link_Emp_Blob_Txt_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'Link_Emp_Blob_Txt'"
@@ -22,6 +34,74 @@
 		"Link_unibenpocdb_azuresql_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'Link_unibenpocdb_azuresql'"
+		},
+		"addgitPhanNhatThien_credential": {
+			"type": "secureString",
+			"metadata": "Secure string for 'credential' of 'addgitPhanNhatThien'"
+		},
+		"blobinfo_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'blobinfo'"
+		},
+		"blobinfogit_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'blobinfogit'"
+		},
+		"blobprivate_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'blobprivate'"
+		},
+		"info_sql_unibenpocdb_git_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'info_sql_unibenpocdb_git'"
+		},
+		"infodb_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'infodb'"
+		},
+		"infosqldbgit_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'infosqldbgit'"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storageprivateip.dfs.core.windows.net/"
+		},
+		"AzureFunction_properties_typeProperties_functionAppUrl": {
+			"type": "string",
+			"defaultValue": "https://tc-pbiembedfunction.azurewebsites.net"
+		},
+		"addgitPhanNhatThien_properties_typeProperties_username": {
+			"type": "string",
+			"defaultValue": "Phannhatthien"
+		},
+		"AzureDataLakeStorage335_properties_privateLinkResourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/4800c9c5-3413-438f-8082-71f6dba2cab9/resourceGroups/Training/providers/Microsoft.Storage/storageAccounts/storageprivateip"
+		},
+		"AzureDataLakeStorage335_properties_groupId": {
+			"type": "string",
+			"defaultValue": "dfs"
+		},
+		"AzureDataLakeStorage335_properties_fqdns": {
+			"type": "array",
+			"defaultValue": [
+				"storageprivateip.dfs.core.windows.net"
+			]
+		},
+		"BlobPrivateEndpoint_properties_privateLinkResourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/4800c9c5-3413-438f-8082-71f6dba2cab9/resourceGroups/Training/providers/Microsoft.Storage/storageAccounts/storageprivateip"
+		},
+		"BlobPrivateEndpoint_properties_groupId": {
+			"type": "string",
+			"defaultValue": "blob"
+		},
+		"BlobPrivateEndpoint_properties_fqdns": {
+			"type": "array",
+			"defaultValue": [
+				"storageprivateip.blob.core.windows.net"
+			]
 		},
 		"containerUri": {
 			"type": "string",
@@ -61,10 +141,127 @@
 					},
 					"Link_unibenpocdb_azuresql_connectionString": {
 						"value": "[parameters('Link_unibenpocdb_azuresql_connectionString')]"
+					},
+					"blobinfo_connectionString": {
+						"value": "[parameters('blobinfo_connectionString')]"
+					},
+					"blobinfogit_connectionString": {
+						"value": "[parameters('blobinfogit_connectionString')]"
+					},
+					"info_sql_unibenpocdb_git_connectionString": {
+						"value": "[parameters('info_sql_unibenpocdb_git_connectionString')]"
+					},
+					"infodb_connectionString": {
+						"value": "[parameters('infodb_connectionString')]"
+					},
+					"infosqldbgit_connectionString": {
+						"value": "[parameters('infosqldbgit_connectionString')]"
 					}
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "tcadf_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureDataLakeStorage335_properties_privateLinkResourceId": {
+						"value": "[parameters('AzureDataLakeStorage335_properties_privateLinkResourceId')]"
+					},
+					"AzureDataLakeStorage335_properties_groupId": {
+						"value": "[parameters('AzureDataLakeStorage335_properties_groupId')]"
+					},
+					"AzureDataLakeStorage335_properties_fqdns": {
+						"value": "[parameters('AzureDataLakeStorage335_properties_fqdns')]"
+					},
+					"BlobPrivateEndpoint_properties_privateLinkResourceId": {
+						"value": "[parameters('BlobPrivateEndpoint_properties_privateLinkResourceId')]"
+					},
+					"BlobPrivateEndpoint_properties_groupId": {
+						"value": "[parameters('BlobPrivateEndpoint_properties_groupId')]"
+					},
+					"BlobPrivateEndpoint_properties_fqdns": {
+						"value": "[parameters('BlobPrivateEndpoint_properties_fqdns')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'tcadf_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "tcadf_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureDataLakeStorage1_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
+					},
+					"AzureFunction_functionKey": {
+						"value": "[parameters('AzureFunction_functionKey')]"
+					},
+					"Link_Emp_Blob_Private_connectionString": {
+						"value": "[parameters('Link_Emp_Blob_Private_connectionString')]"
+					},
+					"addgitPhanNhatThien_credential": {
+						"value": "[parameters('addgitPhanNhatThien_credential')]"
+					},
+					"blobprivate_connectionString": {
+						"value": "[parameters('blobprivate_connectionString')]"
+					},
+					"AzureDataLakeStorage1_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					},
+					"AzureFunction_properties_typeProperties_functionAppUrl": {
+						"value": "[parameters('AzureFunction_properties_typeProperties_functionAppUrl')]"
+					},
+					"addgitPhanNhatThien_properties_typeProperties_username": {
+						"value": "[parameters('addgitPhanNhatThien_properties_typeProperties_username')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'tcadf_ArmTemplate_1')]"
+			]
+		},
+		{
+			"name": "tcadf_ArmTemplate_3",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_3.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'tcadf_ArmTemplate_2')]"
+			]
 		}
 	]
 }

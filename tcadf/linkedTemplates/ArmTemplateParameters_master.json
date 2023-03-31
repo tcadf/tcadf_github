@@ -5,6 +5,15 @@
 		"factoryName": {
 			"value": "tcadf"
 		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureFunction_functionKey": {
+			"value": ""
+		},
+		"Link_Emp_Blob_Private_connectionString": {
+			"value": ""
+		},
 		"Link_Emp_Blob_Txt_connectionString": {
 			"value": ""
 		},
@@ -16,6 +25,58 @@
 		},
 		"Link_unibenpocdb_azuresql_connectionString": {
 			"value": ""
+		},
+		"addgitPhanNhatThien_credential": {
+			"value": ""
+		},
+		"blobinfo_connectionString": {
+			"value": ""
+		},
+		"blobinfogit_connectionString": {
+			"value": ""
+		},
+		"blobprivate_connectionString": {
+			"value": ""
+		},
+		"info_sql_unibenpocdb_git_connectionString": {
+			"value": ""
+		},
+		"infodb_connectionString": {
+			"value": ""
+		},
+		"infosqldbgit_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://storageprivateip.dfs.core.windows.net/"
+		},
+		"AzureFunction_properties_typeProperties_functionAppUrl": {
+			"value": "https://tc-pbiembedfunction.azurewebsites.net"
+		},
+		"addgitPhanNhatThien_properties_typeProperties_username": {
+			"value": "Phannhatthien"
+		},
+		"AzureDataLakeStorage335_properties_privateLinkResourceId": {
+			"value": "/subscriptions/4800c9c5-3413-438f-8082-71f6dba2cab9/resourceGroups/Training/providers/Microsoft.Storage/storageAccounts/storageprivateip"
+		},
+		"AzureDataLakeStorage335_properties_groupId": {
+			"value": "dfs"
+		},
+		"AzureDataLakeStorage335_properties_fqdns": {
+			"value": [
+				"storageprivateip.dfs.core.windows.net"
+			]
+		},
+		"BlobPrivateEndpoint_properties_privateLinkResourceId": {
+			"value": "/subscriptions/4800c9c5-3413-438f-8082-71f6dba2cab9/resourceGroups/Training/providers/Microsoft.Storage/storageAccounts/storageprivateip"
+		},
+		"BlobPrivateEndpoint_properties_groupId": {
+			"value": "blob"
+		},
+		"BlobPrivateEndpoint_properties_fqdns": {
+			"value": [
+				"storageprivateip.blob.core.windows.net"
+			]
 		},
 		"containerUri": {
 			"value": ""
