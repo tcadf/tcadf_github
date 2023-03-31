@@ -1,0 +1,26 @@
+{
+	"name": "ds_emp_tcwebappdb_azuresql_create_table",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Link_tcwebappdb_azuresql",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"TableName": {
+				"type": "string"
+			}
+		},
+		"folder": {
+			"name": "ds_git_thienphantcdata"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"table": {
+				"value": "@dataset().TableName",
+				"type": "Expression"
+			}
+		}
+	}
+}

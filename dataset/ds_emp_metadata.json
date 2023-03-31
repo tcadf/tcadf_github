@@ -1,14 +1,9 @@
 {
-	"name": "ds_emp_Blob",
+	"name": "ds_emp_metadata",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "Link_embedappstorage_Blob",
 			"type": "LinkedServiceReference"
-		},
-		"parameters": {
-			"FileName": {
-				"type": "string"
-			}
 		},
 		"folder": {
 			"name": "ds_git_thienphantcdata"
@@ -18,18 +13,12 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": {
-					"value": "@dataset().FileName",
-					"type": "Expression"
-				},
 				"container": "emp"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
-			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
 		"schema": []
-	},
-	"type": "Microsoft.DataFactory/factories/datasets"
+	}
 }
