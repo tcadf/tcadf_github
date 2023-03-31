@@ -43,7 +43,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "list_info",
+						"referenceName": "ds_emp_Csv_Blob",
 						"type": "DatasetReference"
 					}
 				],
