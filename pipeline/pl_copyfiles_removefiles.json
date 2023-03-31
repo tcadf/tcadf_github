@@ -56,7 +56,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_emp_Blob",
+						"referenceName": "ds_emp_blob_copy",
 						"type": "DatasetReference"
 					}
 				]
